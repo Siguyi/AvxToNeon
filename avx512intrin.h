@@ -34,8 +34,8 @@ typedef union {
     int8x16_t vect_s8[4];
     int16x8_t vect_s16[4];
     int32x4_t vect_s32[4];
-    int64x2_t vect_s64[4];
-    uint8x16_t vect_u8[4];
+    //int64x2_t vect_s64[4];
+    //uint8x16_t vect_u8[4];
     uint16x8_t vect_u16[4];
     uint32x4_t vect_u32[4];
     uint64x2_t vect_u64[4];
