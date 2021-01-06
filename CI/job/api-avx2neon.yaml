@@ -1,0 +1,4 @@
+suite: api-avx2neon
+category: functional
+
+api-avx2neon:

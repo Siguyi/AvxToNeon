@@ -1,0 +1,7 @@
+#!/bin/bash
+
+cd $BENCHMARK_ROOT/api-avx2neon/tests || exit
+
+echo "api-avx2neon running"
+./test
+echo "api-avx2neon finished"
