@@ -1,4 +1,8 @@
 suite: api-avx2neon
 category: functional
 
+#self-makepkg:
+#  pkg_dir: https://github.com/Siguyi/AvxToNeon/blob/master/CI/pkg/PKGBUILD
+#  benchmark: api-avx2neon
+
 api-avx2neon:
