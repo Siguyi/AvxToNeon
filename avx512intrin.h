@@ -34,8 +34,8 @@ typedef union {
     int8x16_t vect_s8[4];
     int16x8_t vect_s16[4];
     int32x4_t vect_s32[4];
-    //int64x2_t vect_s64[4];
-    //uint8x16_t vect_u8[4];
+    int64x2_t vect_s64[4];
+    uint8x16_t vect_u8[4];
     uint16x8_t vect_u16[4];
     uint32x4_t vect_u32[4];
     uint64x2_t vect_u64[4];
@@ -73,17 +73,17 @@ FORCE_INLINE __m512i _mm512_div_epi8(__m512i a, __m512i b)
 FORCE_INLINE __m512i _mm512_div_epi16(__m512i a, __m512i b)
 {
     __m512i res_m512i;
-    res_m512i.vect_i128[0] = _mm_div_epi16(a.vect_i128[0], b.vect_i128[0]);
+    //res_m512i.vect_i128[0] = _mm_div_epi16(a.vect_i128[0], b.vect_i128[0]);
     res_m512i.vect_i128[1] = _mm_div_epi16(a.vect_i128[1], b.vect_i128[1]);
     res_m512i.vect_i128[2] = _mm_div_epi16(a.vect_i128[2], b.vect_i128[2]);
-    //res_m512i.vect_i128[3] = _mm_div_epi16(a.vect_i128[3], b.vect_i128[3]);
+    res_m512i.vect_i128[3] = _mm_div_epi16(a.vect_i128[3], b.vect_i128[3]);
     return res_m512i;
 }
 
 
 FORCE_INLINE __m512i _mm512_div_epi32(__m512i a, __m512i b)
 {
-    //__m512i res_m512i;
+    __m512i res_m512i;
     res_m512i.vect_i256[0] = _mm256_div_epi32(a.vect_i256[0], b.vect_i256[0]);
     res_m512i.vect_i256[1] = _mm256_div_epi32(a.vect_i256[1], b.vect_i256[1]);
     return res_m512i;
@@ -99,7 +99,7 @@ FORCE_INLINE __m512i _mm512_div_epi64(__m512i a, __m512i b)
 FORCE_INLINE __m512i _mm512_div_epu8(__m512i a, __m512i b)
 {
     __m512i res_m512i;
-    //res_m512i.vect_i128[0] = _mm_div_epu8(a.vect_i128[0], b.vect_i128[0]);
+    res_m512i.vect_i128[0] = _mm_div_epu8(a.vect_i128[0], b.vect_i128[0]);
     res_m512i.vect_i128[1] = _mm_div_epu8(a.vect_i128[1], b.vect_i128[1]);
     res_m512i.vect_i128[2] = _mm_div_epu8(a.vect_i128[2], b.vect_i128[2]);
     res_m512i.vect_i128[3] = _mm_div_epu8(a.vect_i128[3], b.vect_i128[3]);
@@ -110,8 +110,8 @@ FORCE_INLINE __m512i _mm512_div_epu16(__m512i a, __m512i b)
 {
     __m512i res_m512i;
     res_m512i.vect_i128[0] = _mm_div_epu16(a.vect_i128[0], b.vect_i128[0]);
-    //res_m512i.vect_i128[1] = _mm_div_epu16(a.vect_i128[1], b.vect_i128[1]);
-    //res_m512i.vect_i128[2] = _mm_div_epu16(a.vect_i128[2], b.vect_i128[2]);
+    res_m512i.vect_i128[1] = _mm_div_epu16(a.vect_i128[1], b.vect_i128[1]);
+    res_m512i.vect_i128[2] = _mm_div_epu16(a.vect_i128[2], b.vect_i128[2]);
     res_m512i.vect_i128[3] = _mm_div_epu16(a.vect_i128[3], b.vect_i128[3]);
     return res_m512i;
 }
@@ -127,8 +127,8 @@ FORCE_INLINE __m512i _mm512_div_epu32(__m512i a, __m512i b)
 FORCE_INLINE __m512i _mm512_div_epu64(__m512i a, __m512i b)
 {
     __m512i res_m512i;
-    //res_m512i.vect_i256[0] = _mm256_div_epu64(a.vect_i256[0], b.vect_i256[0]);
-    //res_m512i.vect_i256[1] = _mm256_div_epu64(a.vect_i256[1], b.vect_i256[1]);
+    res_m512i.vect_i256[0] = _mm256_div_epu64(a.vect_i256[0], b.vect_i256[0]);
+    res_m512i.vect_i256[1] = _mm256_div_epu64(a.vect_i256[1], b.vect_i256[1]);
     return res_m512i;
 }
 
