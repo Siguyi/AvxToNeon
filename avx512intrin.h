@@ -83,7 +83,7 @@ FORCE_INLINE __m512i _mm512_div_epi16(__m512i a, __m512i b)
 
 FORCE_INLINE __m512i _mm512_div_epi32(__m512i a, __m512i b)
 {
-    __m512i res_m512i;
+    //__m512i res_m512i;
     res_m512i.vect_i256[0] = _mm256_div_epi32(a.vect_i256[0], b.vect_i256[0]);
     res_m512i.vect_i256[1] = _mm256_div_epi32(a.vect_i256[1], b.vect_i256[1]);
     return res_m512i;
@@ -91,7 +91,7 @@ FORCE_INLINE __m512i _mm512_div_epi32(__m512i a, __m512i b)
 
 FORCE_INLINE __m512i _mm512_div_epi64(__m512i a, __m512i b)
 {
-    //__m512i res_m512i;
+    __m512i res_m512i;
     res_m512i.vect_i256[0] = _mm256_div_epi64(a.vect_i256[0], b.vect_i256[0]);
     res_m512i.vect_i256[1] = _mm256_div_epi64(a.vect_i256[1], b.vect_i256[1]);
     return res_m512i;
