@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# $BENCHMARK_ROOT: 测试用例存放跟地点
 cd $BENCHMARK_ROOT/api-avx2neon/tests || exit
 
 echo "api-avx2neon running"
